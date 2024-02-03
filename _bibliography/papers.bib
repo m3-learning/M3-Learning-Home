@@ -1,84 +1,180 @@
----
----
-
 @string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+
+@article{Wei2023-tp,
+  title         = {Low latency optical-based mode tracking with machine
+                   learning deployed on {FPGAs} on a tokamak},
+  author        = {Wei, Yumou and Forelli, Ryan F and Hansen, Chris and
+                   Levesque, Jeffrey P and Tran, Nhan and Agar, Joshua C and Di
+                   Guglielmo, Giuseppe and Mauel, Michael E and Navratil,
+                   Gerald A},
+  abstract      = {Active feedback control in magnetic confinement fusion
+                   devices is desirable to mitigate plasma instabilities and
+                   enable robust operation. Optical high-speed cameras provide
+                   a powerful, non-invasive diagnostic and can be suitable for
+                   these applications. In this study, we process fast camera
+                   data, at rates exceeding 100kfps, on $\textit\{in situ\}$
+                   Field Programmable Gate Array (FPGA) hardware to track
+                   magnetohydrodynamic (MHD) mode evolution and generate
+                   control signals in real-time. Our system utilizes a
+                   convolutional neural network (CNN) model which predicts the
+                   $n$=1 MHD mode amplitude and phase using camera images with
+                   better accuracy than other tested non-deep-learning-based
+                   methods. By implementing this model directly within the
+                   standard FPGA readout hardware of the high-speed camera
+                   diagnostic, our mode tracking system achieves a total
+                   trigger-to-output latency of 17.6$\mu$s and a throughput of
+                   up to 120kfps. This study at the High Beta Tokamak-Extended
+                   Pulse (HBT-EP) experiment demonstrates an FPGA-based
+                   high-speed camera data acquisition and processing system,
+                   enabling application in real-time machine-learning-based
+                   tokamak diagnostic and control as well as potential
+                   applications in other scientific domains.},
+  month         = Nov,
+  year          = 2023,
+  url           = {https://arxiv.org/abs/2312.00128},
+  file          = {All Papers/W/Wei et al. 2023 - Low latency optical-based mode tracking with machine learning deployed on FPGAs on a tokamak.pdf},
+  archiveprefix = {arXiv},
+  eprint        = {2312.00128},
+  primaryclass  = {physics.plasm-ph},
+  html          = {https://arxiv.org/abs/2312.00128},
+  pdf           = {2023WeiArxiv.pdf},
+  doi           = {10.48550/arXiv.2312.00128},
+  preview       = {2023WeiArxiv.png},
+  altmetric     = {true},
+  dimensions    = {true},
+  selected      = {true}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+
+
+@article{Deiana2022-ey,
+  title       = {Applications and Techniques for Fast Machine Learning in Science},
+  author      = {Deiana, Allison Mccarn and Tran, Nhan and Agar, Joshua C and Blott,
+                 Michaela and Guglielmo, Giuseppe Di and Duarte, Javier and
+                 Harris, Philip and Hauck, Scott and Liu, Mia and Neubauer, Mark S
+                 and Ngadiuba, Jennifer and Ogrenci-Memik, Seda and Pierini,
+                 Maurizio and Aarrestad, Thea and Bahr, Steffen and Becker, Jurgen
+                 and Berthold, Anne-Sophie and Bonventre, Richard J and Bravo,
+                 Tomas E Muller and Diefenthaler, Markus and Dong, Zhen and
+                 Fritzsche, Nick and Gholami, Amir and Govorkova, Ekaterina and
+                 Hazelwood, Kyle J and Herwig, Christian and Khan, Babar and Kim,
+                 Sehoon and Klijnsma, Thomas and Liu, Yaling and Lo, Kin Ho and
+                 Nguyen, Tri and Pezzullo, Gianantonio and Rasoulinezhad,
+                 Seyedramin and Rivera, Ryan A and Scholberg, Kate and Selig,
+                 Justin and Sen, Sougata and Strukov, Dmitri and Tang, William and
+                 Thais, Savannah and Unger, Kai Lukas and Vilalta, Ricardo and
+                 Krosigk, Belinavon and Warburton, Thomas K and Flechas, Maria
+                 Acosta and Aportela, Anthony and Calvet, Thomas and Cristella,
+                 Leonardo and Diaz, Daniel and Doglioni, Caterina and Galati,
+                 Maria Domenica and Khoda, Elham E and Fahim, Farah and Giri,
+                 Davide and Hawks, Benjamin and Hoang, Duc and Holzman, Burt and
+                 Hsu, Shih-Chieh and Jindariani, Sergo and Johnson, Iris and
+                 Kansal, Raghav and Kastner, Ryan and Katsavounidis, Erik and
+                 Krupa, Jeffrey and Li, Pan and Madireddy, Sandeep and Marx, Ethan
+                 and McCormack, Patrick and Meza, Andres and Mitrevski, Jovan and
+                 Mohammed, Mohammed Attia and Mokhtar, Farouk and Moreno, Eric and
+                 Nagu, Srishti and Narayan, Rohin and Palladino, Noah and Que,
+                 Zhiqiang and Park, Sang Eon and Ramamoorthy, Subramanian and
+                 Rankin, Dylan and Rothman, Simon and Sharma, Ashish and Summers,
+                 Sioni and Vischia, Pietro and Vlimant, Jean-Roch and Weng, Olivia},
+  abstract    = {In this community review report, we discuss applications and
+                 techniques for fast machine learning (ML) in science-the concept
+                 of integrating powerful ML methods into the real-time
+                 experimental data processing loop to accelerate scientific
+                 discovery. The material for the report builds on two workshops
+                 held by the Fast ML for Science community and covers three main
+                 areas: applications for fast ML across a number of scientific
+                 domains; techniques for training and implementing performant and
+                 resource-efficient ML algorithms; and computing architectures,
+                 platforms, and technologies for deploying these algorithms. We
+                 also present overlapping challenges across the multiple
+                 scientific domains where common solutions can be found. This
+                 community report is intended to give plenty of examples and
+                 inspiration for scientific discovery through integrated and
+                 accelerated ML solutions. This is followed by a high-level
+                 overview and organization of technical advances, including an
+                 abundance of pointers to source material, which can enable these
+                 breakthroughs.},
+  journal     = {Front Big Data},
+  volume      = {5},
+  pages       = {787421},
+  year        = {2022},
+  bibtex_show = {true},
+  abbr        = {AJP},
+  preview     = {fdata-05-787421-g0001.jpg},
+  doi         = {10.3389/fdata.2022.787421},
+  dimensions  = {true},
+  altmetric   = {248277},
+  selected    = {true}
 }
+
+
+@article{Kalinin2023-lz,
+  title      = {Machine learning for automated experimentation in scanning
+                transmission electron microscopy},
+  author     = {Kalinin, Sergei V and Mukherjee, Debangshu and Roccapriore,
+                Kevin and Blaiszik, Benjamin J and Ghosh, Ayana and Ziatdinov,
+                Maxim A and Al-Najjar, Anees and Doty, Christina and Akers,
+                Sarah and Rao, Nageswara S and Agar, Joshua C and Spurgeon,
+                Steven R},
+  abstract   = {Machine learning (ML) has become critical for post-acquisition
+                data analysis in (scanning) transmission electron microscopy,
+                (S)TEM, imaging and spectroscopy. An emerging trend is the
+                transition to real-time analysis and closed-loop microscope
+                operation. The effective use of ML in electron microscopy now
+                requires the development of strategies for microscopy-centric
+                experiment workflow design and optimization. Here, we discuss
+                the associated challenges with the transition to active ML,
+                including sequential data analysis and out-of-distribution drift
+                effects, the requirements for edge operation, local and cloud
+                data storage, and theory in the loop operations. Specifically,
+                we discuss the relative contributions of human scientists and ML
+                agents in the ideation, orchestration, and execution of
+                experimental workflows, as well as the need to develop universal
+                hyper languages that can apply across multiple platforms. These
+                considerations will collectively inform the operationalization
+                of ML in next-generation experimentation.},
+  journal    = {npj Computational Materials},
+  publisher  = {Nature Publishing Group},
+  volume     = 9,
+  number     = 1,
+  pages      = {1--16},
+  month      = {12},
+  year       = 2023,
+  language   = {en},
+  issn       = {2057-3960, 2057-3960},
+  url        = {https://www.nature.com/articles/s41524-023-01142-0},
+  html       = {https://www.nature.com/articles/s41524-023-01142-0},
+  pdf        = {npj2023.pdf},
+  doi        = {10.1038/s41524-023-01142-0},
+  preview    = {NPJ2023.webp},
+  altmetric  = {true},
+  dimensions = {true},
+  selected   = {true}
+}
+
+
 
 @article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+  abbr       = {PhysRev},
+  title      = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
+  author     = {Einstein, A. and Podolsky, B. and Rosen, N.},
+  abstract   = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
+  journal    = {Phys. Rev.},
+  volume     = {47},
+  issue      = {10},
+  pages      = {777--780},
+  numpages   = {0},
+  year       = {1935},
+  month      = {May},
+  publisher  = aps,
+  doi        = {10.1103/PhysRev.47.777},
+  url        = {http://link.aps.org/doi/10.1103/PhysRev.47.777},
+  html       = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
+  pdf        = {example_pdf.pdf},
+  altmetric  = {true},
+  dimensions = {true},
+  selected   = {true}
 }
