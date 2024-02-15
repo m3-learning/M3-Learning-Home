@@ -103,7 +103,7 @@
   year        = {2022},
   bibtex_show = {true},
   abbr        = {AJP},
-  preview     = {fdata-05-787421-g0001.jpg},
+  preview     = {2023FastML.jpeg},
   doi         = {10.3389/fdata.2022.787421},
   dimensions  = {true},
   altmetric   = {248277},
@@ -149,32 +149,222 @@
   html       = {https://www.nature.com/articles/s41524-023-01142-0},
   pdf        = {npj2023.pdf},
   doi        = {10.1038/s41524-023-01142-0},
-  preview    = {NPJ2023.webp},
+  preview    = {NPJ2023.png},
   altmetric  = {true},
   dimensions = {true},
   selected   = {true}
 }
 
 
-
-@article{PhysRev.47.777,
-  abbr       = {PhysRev},
-  title      = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author     = {Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract   = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal    = {Phys. Rev.},
-  volume     = {47},
-  issue      = {10},
-  pages      = {777--780},
-  numpages   = {0},
-  year       = {1935},
-  month      = {May},
-  publisher  = aps,
-  doi        = {10.1103/PhysRev.47.777},
-  url        = {http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html       = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf        = {example_pdf.pdf},
+@unpublished{Qin2023-bn,
+  title      = {Extremely Noisy {4D-TEM} Strain Mapping Using Cycle Consistent
+                Spatial Transforming Autoencoders},
+  author     = {Qin, Shuyu and Tran, Nhan and Agar, Joshua C},
+  abstract   = {Atomic-scale imaging of 2D and quantum materials benefits from
+                precisely extracting crystallographic strain, shear, and rotation
+                to understand their mechanical, optical and electronic
+                properties. One powerful technique is 4D-TEM (4-dimensional
+                transmission electron microscopy), where a convergent electron
+                beam is scanned across a sample while measuring the resulting
+                diffraction pattern with a direct electron detector. Extracting
+                the crystallographic strain, shear, and rotation from this data
+                relies either on cross-correlation of probe templates (e.g.,
+                implemented in py4DSTEM) or determining the center of mass (CoM)
+                of the diffraction peaks. These algorithms have limitations. They
+                require manual preprocessing and hyperparameter tuning, are
+                sensitive to signal-to-noise, and generally are difficult to
+                automate. There is no one-size-fits-all algorithm. Recently,
+                machine learning techniques have been used to assist in analyzing
+                4D-TEM data, however, these models do not possess the capacity to
+                learn the strain, rotation, or translation instead they just
+                learn an approximation that almost aways tends to be correct as
+                long as the test examples are within the training dataset
+                distribution. We developed a novel neural network structure --
+                Cycle Consistent Spatial Transforming Autoencoder (CC-ST-AE).
+                This model takes a set of diffraction images and trains a sparse
+                autoencoder to classify an observed diffraction pattern to a
+                dictionary of learned ``averaged'' diffraction patterns.
+                Secondly, it learns the affine transformation matrix parameters
+                that minimizes the reconstruction error between the dictionary
+                and the input diffraction pattern. Since the affine
+                transformation includes translation, strain, shear, and rotation,
+                we can parsimoniously learn the strain tensor. To ensure the
+                model is physics conforming, we train the model cycle
+                consistently, by ensuring the inverse affine transformation from
+                the dictionary results in the original diffraction pattern. We
+                validated this model on a number of benchmark tasks including: A
+                Simulated 4D TEM data of $WS_2$ and $WSe_2$ lateral
+                heterostructures (noise free) with a ground truth of the strain,
+                rotation and shear parameters. Secondly, we test this model on
+                experimental 4D TEM on 2D heterostructures of tungsten disulfide
+                ($WS_2$) and tungsten diselenide ($WSe_2$). This model shows
+                several significant improvements including: 1. When tested on
+                simulated data, the model can recover the ground truth with
+                minimal error. 2. The model can learn the rotation and strain on
+                noisy diffraction patterns where CoM failed, and significantly
+                outperforms template matching (py4DSTEM). 3. Our model can
+                accommodate large and continuous rotations difficult to obtain
+                with other methods. 4. Our model is more robust to noisy data. 5.
+                Our model can map the strain, shear and rotation; identify
+                dislocation and ripples; and distinguish background and sample
+                area automatically. Ultimately, this work demonstrates how
+                embedding physical concepts into unsupervised neural networks can
+                simplify, automate, and accelerate analysis pipelines while
+                simultaneously leveraging stochastic averaging that improves
+                robustness on noisy data. This algorithmic concept can be
+                extended to include other physical phenomena (e.g., polarization,
+                sample tilt), can be used in automated experiments, and can be
+                applied to other applications in materials characterization.
+                Detailed information is attached in PDF.},
+  month      = Nov,
+  year       = 2023,
+  url        = {https://openreview.net/pdf?id=7yt3N0o0W9},
+  pdf        = {2023NeurIPSshuyu.pdf},
+  doi        = {},
+  preview    = {2023NeurIPSshuyu.jpg},
   altmetric  = {true},
   dimensions = {true},
   selected   = {true}
 }
+
+@unpublished{Kaliyev2023-xz,
+  title      = {Rapid Fitting of {Band-Excitation} Piezoresponse Force Microscopy
+                Using Physics Constrained Unsupervised Neural Networks},
+  author     = {Kaliyev, Alibek T and Forelli, Ryan F and Qin, Shuyu and Guo,
+                Yichen and Memik, Seda and Mahoney, Michael W and Gholami, Amir
+                and Tran, Nhan and Harris, Philip and Tak{\'a}{\v c}, Martin and
+                Agar, Joshua},
+  abstract   = {Scanning probe spectroscopy generates high-dimensional data that
+                is difficult to analyze in real time, hindering researcher
+                creativity. Machine learning techniques like PCA accelerate
+                analysis but are inefficient, sensitive to noise, and lack
+                interpretability. We developed an unsupervised deep neural
+                network constrained by a known empirical equation to enable
+                real-time, robust fitting. Demonstrated on band-excitation
+                piezoresponse force microscopy, our model fits cantilever
+                response to a simple harmonic oscillators more than 4 orders of
+                magnitude faster than least squares while enhancing robustness.
+                It performs well on noisy data where conventional methods fail.
+                Quantization-aware training enables sub-millisecond streaming
+                inference on an FPGA, orders of magnitude faster than data
+                acquisition. This methodology broadly applies to spectroscopic
+                fitting and provides a pathway for real-time control and
+                interpretation.},
+  month      = Nov,
+  year       = 2023,
+  url        = {https://openreview.net/pdf?id=ITda7kqxSn},
+  pdf        = {2023NeurIPSAlibek.pdf},
+  doi        = {},
+  preview    = {2023NeurIPSAlibek.png},
+  altmetric  = {true},
+  dimensions = {true},
+  selected   = {true}
+}
+
+
+@unpublished{Guo2023-ab,
+  title    = {Understanding Experimental Data by Identifying Symmetries with
+              Deep Learning},
+  author   = {Guo, Yichen and Qin, Shuyu and Agar, Joshua},
+  abstract = {Utilizing computational methods to extract actional information
+              from scientific data is essential due to the time-consuming and
+              inaccurate nature of the manual processes of humans. To better
+              serve the purpose, equipping computational methods with physical
+              rules is necessary. Integrating deep learning models with
+              symmetry awareness has emerged as a promising approach to
+              significantly improve symmetry detection in experimental data,
+              with techniques such as parameter sharing and novel convolutional
+              layers enhancing symmetry recognition.[1,2,3,4,5,6] However, the
+              challenge of integrating physical principles, such as symmetry,
+              into these models persists. To address this, we have developed
+              benchmarking datasets and training frameworks, exploring three
+              perspectives to classify wallpaper group symmetries effectively.
+              Our study demonstrates the limitations of deep learning models in
+              understanding symmetry, as evidenced by benchmark results. A
+              detailed analysis is provided with a hierarchical dataset and
+              training outcomes, while a symmetry filter is designed aiming to
+              improve symmetry operation recognition. This endeavor aims to
+              push the boundaries of deep learning models in comprehending
+              symmetry and embed physical rules within them, ultimately
+              unlocking new possibilities at the intersection of machine
+              learning and physical symmetry, with valuable applications in
+              materials science and beyond.},
+  month    = Nov,
+  year     = 2023,
+  url      = {https://openreview.net/pdf?id=TDhNb2Q9Xm},
+  pdf        = {2023NeuroIPYichen.pdf},
+  doi        = {},
+  preview    = {2023NeuroIPSYichen.png},
+  altmetric  = {true},
+  dimensions = {true},
+  selected   = {true}
+}
+
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@article{OReilly2023-su,
+  title       = {The effect of chemical environment and temperature on the
+                 domain structure of free-standing {BaTiO3} via in situ {STEM}},
+  author      = {O'Reilly, Tamsin and Holsgrove, Kristina M and Zhang, Xinqiao
+                 and Scott, John J R and Gaponenko, Iaro and Kumar, Praveen and
+                 Agar, Joshua and Paruch, Patrycja and Arredondo, Miryam},
+  affiliation = {School of Mathematics and Physics, Queen's University Belfast,
+                 Belfast, BT7 1NN, UK.; University of Glasgow, Glasgow, G12
+                 8QQ, UK.; School of Mathematics and Physics, Queen's
+                 University Belfast, Belfast, BT7 1NN, UK.; Department of
+                 Mechanical Engineering and Mechanics, Drexel University,
+                 Philadelphia, PA, 19104, USA.; DQMP, University of Geneva,
+                 Geneva, 1211, Switzerland.; School of Mathematics and Physics,
+                 Queen's University Belfast, Belfast, BT7 1NN, UK.; Shared
+                 Instrumentation Facility, Colorado School of Mines, Golden,
+                 CO, 80401, USA.},
+  abstract    = {Ferroelectrics, due to their polar nature and reversible
+                 switching, can be used to dynamically control surface
+                 chemistry for catalysis, chemical switching, and other
+                 applications such as water splitting. However, this is a
+                 complex phenomenon where ferroelectric domain orientation and
+                 switching are intimately linked to surface charges. In this
+                 work, the temperature-induced domain behavior of
+                 ferroelectric-ferroelastic domains in free-standing BaTiO3
+                 films under different gas environments, including vacuum and
+                 oxygen-rich, is studied by in situ scanning transmission
+                 electron microscopy (STEM). An automated pathway to
+                 statistically disentangle and detect domain structure
+                 transformations using deep autoencoders, providing a pathway
+                 towards real-time analysis is also established. These results
+                 show a clear difference in the temperature at which phase
+                 transition occurs and the domain behavior between various
+                 environments, with a peculiar domain reconfiguration at low
+                 temperatures, from a-c to a-a at $\approx$60 °C. The vacuum
+                 environment exhibits a rich domain structure, while under the
+                 oxidizing environment, the domain structure is largely
+                 suppressed. The direct visualization provided by in situ gas
+                 and heating STEM allows to investigate the influence of
+                 external variables such as gas, pressure, and temperature, on
+                 oxide surfaces in a dynamic manner, providing invaluable
+                 insights into the intricate surface-screening mechanisms in
+                 ferroelectrics.},
+  journal     = {Advancement of science},
+  publisher   = {Wiley},
+  pages       = {e2303028},
+  month       = Aug,
+  year        = 2023,
+  url         = {https://onlinelibrary.wiley.com/doi/10.1002/advs.202303028},
+  file        = {All Papers/O/O'Reilly et al. 2023 - The effect of chemical environment and temperature on the domain structure of free-standing BaTiO3 via in situ STEM.pdf},
+  keywords    = {BaTiO3 free-standing film; chemical environment; domains; in
+                 situ heating STEM},
+  copyright   = {http://creativecommons.org/licenses/by/4.0/},
+  language    = {en},
+  issn        = {0001-866X, 2198-3844},
+  pmid        = {37607120},
+  doi         = {10.1002/advs.202303028}
+  pdf        = {2023AdvanceSciMiryam.pdf},
+  doi        = {},
+  preview    = {2023AdvanceSciMiryam.png},
+  altmetric  = {true},
+  dimensions = {true},
+  selected   = {true}
+}
+
+
