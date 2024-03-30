@@ -8,27 +8,74 @@ nav: true
 nav_order: 1
 ---
 
-<div class="filters">
-  <div class="year-selector">
+<div class="filters" style="text-align: left;">
+  <div class="filter-item year-selector">
     <label for="yearSelect">Select a Year: </label>
-    <select id="yearSelect" onchange="filterPublications()">
-      <option value="all">All Years</option>
-      <!-- JavaScript will populate years here -->
-    </select>
+    <div class="custom-select-wrapper">
+      <select id="yearSelect" onchange="filterPublications()">
+        <option value="all">All Years</option>
+        <!-- JavaScript will populate years here -->
+      </select>
+    </div>
   </div>
 
-  <!-- Publication Type Selector -->
-  <div class="type-selector">
+  <div class="filter-item type-selector">
     <label for="typeSelect">Select a Publication Type: </label>
-    <select id="typeSelect" onchange="filterPublications()">
-      <option value="all">All Types</option>
-      <option value="article">article</option>
-      <option value="conference">Conference Papers</option>
-      <option value="book">Book Chapters</option>
-      <!-- Add more types as needed -->
-    </select>
+    <div class="custom-select-wrapper">
+      <select id="typeSelect" onchange="filterPublications()">
+        <option value="all">All Types</option>
+        <option value="article">Article</option>
+        <option value="conference">Conference Papers</option>
+        <option value="book">Book Chapters</option>
+        <!-- Add more types as needed -->
+      </select>
+    </div>
   </div>
 </div>
+
+<style>
+  .filters {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start; /* Aligns items to the left */
+    max-width: 300px;
+    margin: 0; /* Adjust or remove margin as needed */
+  }
+
+  .custom-select-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Removes default styling of select */
+    background-color: #f9f9f9;
+  }
+
+  .custom-select-wrapper:after {
+    content: "\25BC"; /* Adds custom arrow */
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #777;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+</style>
+
+
 
 <script>
   const minYear = 2010; // Adjust based on your data
