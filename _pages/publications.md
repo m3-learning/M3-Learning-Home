@@ -26,6 +26,7 @@ nav_order: 1
         <option value="all">All Types</option>
         <option value="article">Article</option>
         <option value="conference">Conference Papers</option>
+        <option value="thesis">Thesis</option>
         <option value="book">Book Chapters</option>
         <!-- Add more types as needed -->
       </select>
